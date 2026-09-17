@@ -3,6 +3,12 @@ ru:
   layouts:
     application:
       app_name: Коллективный блог
+      sign_in: Войти
+      sign_up: Зарегистрироваться
+      sign_out: Выйти
+  home:
+    index:
+      welcome: Добро пожаловать в Коллективный блог
   date:
     abbr_day_names:
     - Вс

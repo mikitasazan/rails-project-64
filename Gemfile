@@ -31,9 +31,16 @@ gem "solid_cable"
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
+# json 3 breaks ActiveSupport message decoding (JSON.parse arity change)
+gem "json", "< 3"
+
 # Error tracking
 gem "sentry-ruby"
 gem "sentry-rails"
+
+# Authentication and its Russian translations
+gem "devise"
+gem "devise-i18n"
 
 group :production do
   # Use postgres as the database for Active Record in production
