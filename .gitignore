@@ -1,0 +1,22 @@
+# See https://help.github.com/articles/ignoring-files for more about ignoring files.
+
+# Bundle-local gems
+/vendor/bundle
+/vendor/broadcast
+
+# Temporary files
+/tmp
+/log
+/storage
+
+# Local configs and secrets
+/.bundle
+/config/master.key
+
+# Build artifacts
+/app/assets/builds
+/node_modules
+
+# Editor and OS noise
+.DS_Store
+*~
