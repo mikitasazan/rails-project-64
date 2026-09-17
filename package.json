@@ -2,6 +2,7 @@
   "name": "app",
   "private": true,
   "devDependencies": {
+    "@herb-tools/linter": "^0.10.4",
     "esbuild": "^0.28.2"
   },
   "scripts": {

@@ -31,6 +31,10 @@ gem "solid_cable"
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
+# Error tracking
+gem "sentry-ruby"
+gem "sentry-rails"
+
 group :production do
   # Use postgres as the database for Active Record in production
   gem "pg"
@@ -61,4 +65,7 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+  # Test data generators and readable assertions
+  gem "faker"
+  gem "minitest-power_assert"
 end
