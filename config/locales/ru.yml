@@ -11,6 +11,7 @@ ru:
     index:
       title: Коллективный блог
       empty: Постов пока нет. Станьте первым автором!
+      liked_count: "Понравилось: %{count}"
     new:
       title: Новый пост
       submit: Опубликовать
@@ -20,14 +21,17 @@ ru:
     show:
       all_posts: Все посты
       comments: Комментарии
+      liked_count: "Понравилось: %{count}"
     comment_form:
       response: Ответить
-  comments:
-    create:
-      success: Комментарий опубликован
     create:
       success: Пост опубликован
       unprocessable_content: Не удалось создать пост. Проверьте введенные данные
+  likes:
+    like: Лайк
+  comments:
+    create:
+      success: Комментарий опубликован
   activerecord:
     attributes:
       post_comment:

@@ -14,6 +14,7 @@
       <p class="mt-2"><%= truncate(post.body, length: 300) %></p>
 
       <p class="mt-2 text-sm text-gray-500">
+        <span class="mr-2"><%= t(".liked_count", count: post.likes_count) %></span>
         <span class="mr-2"><%= post.category.name %></span>
         <span class="mr-2"><%= distance_of_time_in_words_to_now(post.created_at) %></span>
         <span><%= post.creator.email %></span>

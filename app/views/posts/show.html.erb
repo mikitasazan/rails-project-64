@@ -9,10 +9,30 @@
 
   <div class="space-y-4"><%= simple_format(@post.body) %></div>
 
-  <p class="mt-10 text-sm text-gray-500">
-    <span class="mr-2"><%= @post.creator.email %></span>
-    <span><%= distance_of_time_in_words_to_now(@post.created_at) %></span>
-  </p>
+  <div class="mt-10 flex items-center justify-between">
+    <p id="post-section" class="text-sm text-gray-500">
+      <span class="mr-2"><%= @post.creator.email %></span>
+      <span><%= distance_of_time_in_words_to_now(@post.created_at) %></span>
+    </p>
+
+    <div id="likes-section" class="flex items-center gap-2">
+      <span><%= t(".liked_count", count: @post.likes_count) %></span>
+
+      <% if !user_signed_in? %>
+        <%= render "posts/thumb_up", filled: false %>
+      <% elsif @user_like %>
+        <%= button_to post_like_path(@post, @user_like), method: :delete,
+                      aria: { label: t("likes.like") }, class: "cursor-pointer" do %>
+          <%= render "posts/thumb_up", filled: true %>
+        <% end %>
+      <% else %>
+        <%= button_to post_likes_path(@post), method: :post,
+                      aria: { label: t("likes.like") }, class: "cursor-pointer" do %>
+          <%= render "posts/thumb_up", filled: false %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
 </article>
 
 <section id="comment-section" class="mt-8">

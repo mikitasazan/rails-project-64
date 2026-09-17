@@ -9,6 +9,7 @@ class PostsController < ApplicationController
     @post = Post.find(params.expect(:id))
     @comments = @post.comments.includes(:user).arrange(order: { created_at: :desc })
     @form_comment = current_user&.comments&.build
+    @user_like = @post.likes.find_by(user: current_user)
   end
 
   def new
