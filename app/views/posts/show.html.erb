@@ -1,0 +1,16 @@
+<nav class="text-sm text-gray-500">
+  <%= link_to t(".all_posts"), root_path, class: "hover:underline" %>
+  <span class="mx-2">/</span>
+  <span class="text-gray-900"><%= @post.category.name %></span>
+</nav>
+
+<article class="mt-6">
+  <h1 class="mb-6 text-2xl font-bold"><%= @post.title %></h1>
+
+  <div class="space-y-4"><%= simple_format(@post.body) %></div>
+
+  <p class="mt-10 text-sm text-gray-500">
+    <span class="mr-2"><%= @post.creator.email %></span>
+    <span><%= distance_of_time_in_words_to_now(@post.created_at) %></span>
+  </p>
+</article>

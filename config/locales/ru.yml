@@ -7,9 +7,27 @@ ru:
       sign_up: Зарегистрироваться
       sign_out: Выйти
       footer: Коллективный блог — учебный проект
-  home:
+  posts:
     index:
-      welcome: Добро пожаловать в Коллективный блог
+      title: Коллективный блог
+      empty: Постов пока нет. Станьте первым автором!
+    new:
+      title: Новый пост
+      submit: Опубликовать
+      hints:
+        title: 5-255 символов
+        body: От 200 до 4000 символов
+    show:
+      all_posts: Все посты
+    create:
+      success: Пост опубликован
+      unprocessable_content: Не удалось создать пост. Проверьте введенные данные
+  activerecord:
+    attributes:
+      post:
+        title: Заголовок
+        body: Содержание
+        category: Категория
   date:
     abbr_day_names:
     - Вс

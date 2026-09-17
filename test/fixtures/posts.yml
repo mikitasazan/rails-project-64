@@ -1,0 +1,5 @@
+one:
+  title: First post about ruby language
+  body: <%= "lorem ipsum dolor sit amet " * 12 %>
+  category: one
+  creator: one

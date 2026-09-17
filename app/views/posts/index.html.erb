@@ -1,0 +1,23 @@
+<% content_for :title, t(".title") %>
+
+<div class="flex flex-col gap-4">
+  <% if @posts.empty? %>
+    <p class="text-gray-500"><%= t(".empty") %></p>
+  <% end %>
+
+  <% @posts.each do |post| %>
+    <article class="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
+      <h2 class="text-lg font-medium">
+        <%= link_to post.title, post_path(post), class: "hover:underline" %>
+      </h2>
+
+      <p class="mt-2"><%= truncate(post.body, length: 300) %></p>
+
+      <p class="mt-2 text-sm text-gray-500">
+        <span class="mr-2"><%= post.category.name %></span>
+        <span class="mr-2"><%= distance_of_time_in_words_to_now(post.created_at) %></span>
+        <span><%= post.creator.email %></span>
+      </p>
+    </article>
+  <% end %>
+</div>
