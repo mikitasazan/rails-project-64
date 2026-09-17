@@ -7,4 +7,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :posts, inverse_of: :creator, foreign_key: "creator_id", dependent: :destroy
+  has_many :comments, class_name: "PostComment", inverse_of: :user, dependent: :destroy
 end

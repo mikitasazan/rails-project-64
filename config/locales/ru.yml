@@ -19,15 +19,28 @@ ru:
         body: От 200 до 4000 символов
     show:
       all_posts: Все посты
+      comments: Комментарии
+    comment_form:
+      response: Ответить
+  comments:
+    create:
+      success: Комментарий опубликован
     create:
       success: Пост опубликован
       unprocessable_content: Не удалось создать пост. Проверьте введенные данные
   activerecord:
     attributes:
+      post_comment:
+        content: Тело комментария
       post:
         title: Заголовок
         body: Содержание
         category: Категория
+  helpers:
+    submit:
+      post_comment:
+        create: Оставить комментарий
+
   date:
     abbr_day_names:
     - Вс

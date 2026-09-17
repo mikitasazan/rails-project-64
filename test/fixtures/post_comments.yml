@@ -1,0 +1,11 @@
+one:
+  content: First root comment on the post
+  user: one
+  post: one
+  ancestry: ""
+
+nested:
+  content: Reply to the first root comment
+  user: two
+  post: one
+  ancestry: <%= ActiveRecord::FixtureSet.identify(:one) %>

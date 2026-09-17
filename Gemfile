@@ -42,6 +42,9 @@ gem "sentry-rails"
 gem "devise"
 gem "devise-i18n"
 
+# Comment tree
+gem "ancestry"
+
 group :production do
   # Use postgres as the database for Active Record in production
   gem "pg"
