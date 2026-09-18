@@ -32,7 +32,7 @@ gem "solid_cable"
 gem "bootsnap", require: false
 
 # json 3 breaks ActiveSupport message decoding (JSON.parse arity change)
-gem "json", "< 3"
+gem "json", "< 4"
 
 # Error tracking
 gem "sentry-ruby"
