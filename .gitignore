@@ -20,3 +20,4 @@
 # Editor and OS noise
 .DS_Store
 *~
+.hexlet-check/
